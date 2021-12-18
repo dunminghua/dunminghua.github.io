@@ -31,31 +31,33 @@
     })();
 </script>
 
-  <meta name="description" content="不见所长，日有所长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dunming Hua&#39;s Blog">
-<meta property="og:url" content="https://dunminghua.github.io/index.html">
+  <meta name="description" content="704. Binary Search题目：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。 12345678910111213141516171819202122class Solution(object):    def search(self, nums:list, ta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Binary Search">
+<meta property="og:url" content="https://dunminghua.github.io/2021/12/09/Binary-Search/index.html">
 <meta property="og:site_name" content="Dunming Hua&#39;s Blog">
-<meta property="og:description" content="不见所长，日有所长">
+<meta property="og:description" content="704. Binary Search题目：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。 12345678910111213141516171819202122class Solution(object):    def search(self, nums:list, ta">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-09T04:24:28.000Z">
+<meta property="article:modified_time" content="2021-12-18T14:33:46.871Z">
 <meta property="article:author" content="Hua Dunming">
-<meta property="article:tag" content="just do it">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://dunminghua.github.io/">
+<link rel="canonical" href="https://dunminghua.github.io/2021/12/09/Binary-Search/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Dunming Hua's Blog</title>
+  <title>Binary Search | Dunming Hua's Blog</title>
   
 
 
@@ -176,9 +178,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -194,10 +197,9 @@
       <meta itemprop="name" content="Dunming Hua's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/09/Binary-Search/" class="post-title-link" itemprop="url">Binary Search</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Binary Search
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -257,7 +259,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="704-Binary-Search"><a href="#704-Binary-Search" class="headerlink" title="704. Binary Search"></a>704. Binary Search</h1><p>题目：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+        <h1 id="704-Binary-Search"><a href="#704-Binary-Search" class="headerlink" title="704. Binary Search"></a>704. Binary Search</h1><p>题目：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums:<span class="built_in">list</span>, target:<span class="built_in">int</span></span>):</span> -&gt; <span class="built_in">int</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">int</span>(<span class="built_in">len</span>(nums)) - <span class="number">1</span></span><br><span class="line">        <span class="comment">#注意list的区间，左闭右闭[],左闭右开[) </span></span><br><span class="line">        <span class="comment">#区间的定义对循环时是否加等号非常重要</span></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right: </span><br><span class="line">            <span class="comment">#mid = (left + right) // 2: 该写法是隐藏的bug, 导致溢出</span></span><br><span class="line">            <span class="comment">#https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html</span></span><br><span class="line">            mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">            <span class="comment">#elif nums[mid] &lt; target:</span></span><br><span class="line">            <span class="comment">#   left = mid + 1</span></span><br><span class="line">            <span class="comment">#else:</span></span><br><span class="line">            <span class="comment">#    right = mid - 1</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">               left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span> </span><br></pre></td></tr></table></figure>
 
 
@@ -265,7 +267,6 @@
 <p>说明：<a target="_blank" rel="noopener" href="https://github.com/youngyangyang04/leetcode-master">算法训练刷题攻略参考</a></p>
 <p>作者：huadm</p>
 
-      
     </div>
 
     
@@ -273,397 +274,40 @@
     
 
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dunminghua.github.io/2021/12/04/idea-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.jpg">
-      <meta itemprop="name" content="Hua Dunming">
-      <meta itemprop="description" content="不见所长，日有所长">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dunming Hua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/04/idea-1/" class="post-title-link" itemprop="url">开题答辩结束后想法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-12-04 19:45:37 / Modified: 19:53:35" itemprop="dateCreated datePublished" datetime="2021-12-04T19:45:37+08:00">2021-12-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Thoughts/" itemprop="url" rel="index"><span itemprop="name">Thoughts</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/12/04/idea-1/" class="post-meta-item leancloud_visitors" data-flag-title="开题答辩结束后想法" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/12/04/idea-1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/04/idea-1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>人有的时候是渺小的，但有的时候却是强大的。</li>
-<li>最近看似很忙，实则很闲。没有了具体的目标，就容易失去自我。</li>
-<li>最近表现不是很好，对于学习新的事物，内心过于急躁，无法沉下心来认真的琢磨不了解的点。这对于我来说是一个不好的信号。心中似乎想要做许多有意义的事情，但在学习的过程确实感觉自己本身实力的不足或匮乏，有一种被现实的打倒的感觉，这是基于在编程训练和其它方面切实感受到的。其次，鉴于自己研究范围是属于计算生物学领域的，该领域普遍充斥着比较复杂的机器学习模型和深度学习模型，没有这方面的知识似乎就很容易与计算生物学脱轨，所以，这方面的知识确实应该补一补。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dunminghua.github.io/2021/10/30/Perfect/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.jpg">
-      <meta itemprop="name" content="Hua Dunming">
-      <meta itemprop="description" content="不见所长，日有所长">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dunming Hua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/30/Perfect/" class="post-title-link" itemprop="url">Perfect</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-10-30 22:10:48 / Modified: 22:56:52" itemprop="dateCreated datePublished" datetime="2021-10-30T22:10:48+08:00">2021-10-30</time>
-            </span>
-
-          
-            <span id="/2021/10/30/Perfect/" class="post-meta-item leancloud_visitors" data-flag-title="Perfect" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/10/30/Perfect/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/30/Perfect/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>雅琪宝贝今天总结的一句话<br><em>完美</em> <em>快乐</em> </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dunminghua.github.io/2021/10/23/Give-my-girlfriend/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.jpg">
-      <meta itemprop="name" content="Hua Dunming">
-      <meta itemprop="description" content="不见所长，日有所长">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dunming Hua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/23/Give-my-girlfriend/" class="post-title-link" itemprop="url">A letter to Yaqi Wei</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-23 00:32:28" itemprop="dateCreated datePublished" datetime="2021-10-23T00:32:28+08:00">2021-10-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-30 22:08:00" itemprop="dateModified" datetime="2021-10-30T22:08:00+08:00">2021-10-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Beautiful-Things/" itemprop="url" rel="index"><span itemprop="name">Beautiful Things</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/10/23/Give-my-girlfriend/" class="post-meta-item leancloud_visitors" data-flag-title="A letter to Yaqi Wei" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/10/23/Give-my-girlfriend/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/23/Give-my-girlfriend/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Here's something encrypted, password is required to continue reading.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/23/Give-my-girlfriend/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+      <div>
         
-      
-    </div>
 
-    
-    
+      </div>
     
 
-    
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/04/idea-1/" rel="prev" title="开题答辩结束后想法">
+      <i class="fa fa-chevron-left"></i> 开题答辩结束后想法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dunminghua.github.io/2021/10/22/This-is-my-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_icon.jpg">
-      <meta itemprop="name" content="Hua Dunming">
-      <meta itemprop="description" content="不见所长，日有所长">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dunming Hua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/22/This-is-my-first-blog/" class="post-title-link" itemprop="url">This is my first blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-10-22 22:38:29 / Modified: 22:40:53" itemprop="dateCreated datePublished" datetime="2021-10-22T22:38:29+08:00">2021-10-22</time>
-            </span>
-
-          
-            <span id="/2021/10/22/This-is-my-first-blog/" class="post-meta-item leancloud_visitors" data-flag-title="This is my first blog" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/10/22/This-is-my-first-blog/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/22/This-is-my-first-blog/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h2><ul>
-<li><p>Just for funny.</p>
-</li>
-<li><p>Just for learning.</p>
-</li>
-<li><p>Just for my life.</p>
-</li>
-<li><p>Just for future.</p>
-</li>
-<li><p>Just want to wrting some interesting things and growing up on the way.</p>
-</li>
-</ul>
-<p>Name: Dunming Hua  </p>
-<p>Date: 22-10-2021</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -710,6 +354,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#704-Binary-Search"><span class="nav-number">1.</span> <span class="nav-text">704. Binary Search</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
