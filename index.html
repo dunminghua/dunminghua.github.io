@@ -207,7 +207,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-04-19 22:59:26 / Modified: 23:25:41" itemprop="dateCreated datePublished" datetime="2022-04-19T22:59:26+08:00">2022-04-19</time>
+              <time title="Created: 2022-04-19 22:59:26 / Modified: 23:36:34" itemprop="dateCreated datePublished" datetime="2022-04-19T22:59:26+08:00">2022-04-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -345,7 +345,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-18 23:23:00" itemprop="dateModified" datetime="2021-12-18T23:23:00+08:00">2021-12-18</time>
+                <time title="Modified: 2022-04-19 23:31:19" itemprop="dateModified" datetime="2022-04-19T23:31:19+08:00">2022-04-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -390,13 +390,14 @@
 
       
           <p>题目：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums:<span class="built_in">list</span>, target:<span class="built_in">int</span></span>):</span> -&gt; <span class="built_in">int</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">int</span>(<span class="built_in">len</span>(nums)) - <span class="number">1</span></span><br><span class="line">        <span class="comment">#注意list的区间，左闭右闭[],左闭右开[) </span></span><br><span class="line">        <span class="comment">#区间的定义对循环时是否加等号非常重要</span></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right: </span><br><span class="line">            <span class="comment">#mid = (left + right) // 2: 该写法是隐藏的bug, 导致溢出</span></span><br><span class="line">            <span class="comment">#https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html</span></span><br><span class="line">            mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">            <span class="comment">#elif nums[mid] &lt; target:</span></span><br><span class="line">            <span class="comment">#   left = mid + 1</span></span><br><span class="line">            <span class="comment">#else:</span></span><br><span class="line">            <span class="comment">#    right = mid - 1</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">               left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span> </span><br></pre></td></tr></table></figure>
-
-
-
-<p>说明：<a target="_blank" rel="noopener" href="https://github.com/youngyangyang04/leetcode-master">算法训练刷题攻略参考</a></p>
-<p>作者：huadm</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/09/Binary-Search/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -448,7 +449,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-18 23:25:31" itemprop="dateModified" datetime="2021-12-18T23:25:31+08:00">2021-12-18</time>
+                <time title="Modified: 2022-04-19 23:36:36" itemprop="dateModified" datetime="2022-04-19T23:36:36+08:00">2022-04-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -492,25 +493,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h5 id="题目：给你一个按非递减顺序排序的整数数组nums，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。"><a href="#题目：给你一个按非递减顺序排序的整数数组nums，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。" class="headerlink" title="题目：给你一个按非递减顺序排序的整数数组nums，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。"></a>题目：给你一个按非递减顺序排序的整数数组nums，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortedSquared</span>(<span class="params">self, nums:<span class="built_in">list</span></span>):</span> -&gt; <span class="built_in">list</span></span><br><span class="line">        <span class="comment">#method 1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sorted</span>([i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> nums])</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortedSquared</span>(<span class="params">self, nums:<span class="built_in">list</span></span>):</span> -&gt; <span class="built_in">list</span></span><br><span class="line">        <span class="comment">#method 2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sorted</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x:x**<span class="number">2</span>, nums)))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortedSquared</span>(<span class="params">self, nums:<span class="built_in">list</span></span>):</span> -&gt; <span class="built_in">list</span></span><br><span class="line">        <span class="comment">#method 3</span></span><br><span class="line">        <span class="comment">#双指针法</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n - <span class="number">1</span></span><br><span class="line">        <span class="comment">#define a empty array to store result </span></span><br><span class="line">        k = n - <span class="number">1</span></span><br><span class="line">        res = [-<span class="number">1</span>] * n</span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            l_num = nums[left] ** <span class="number">2</span></span><br><span class="line">            r_num = nums[right] ** <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> l_num &gt; r_num:</span><br><span class="line">                res[k] = l_num</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res[k] = r_num</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">            k -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>method 2 和 1 属于暴力破解法，对数组平方后用快速排序排序, 时间复杂度是 $O(n + n/log(n))$</li>
-<li>method 3 使用双指针法，从 input 左右两边向中间逼近，时间复杂度 $O(n)$, 相较于前两种方法效率高不少。</li>
-<li>sorted(list) VS. list.sort()  <ol>
-<li>sorted() worked on any iterable, not just lists, Strings, tuples, dic, generators, etc., which return a new sorted list, leaving the original list unaffected.</li>
-<li>use sort() when you want to mutate the list.</li>
-<li>list.sort() is faster than sorted() bacause it doesn’t have to creat a copy</li>
-</ol>
-</li>
-</ul>
-<p>说明：<a target="_blank" rel="noopener" href="https://github.com/youngyangyang04/leetcode-master">算法训练刷题攻略参考</a></p>
-<p>作者：huadm</p>
-
+          <p>题目：给你一个按非递减顺序排序的整数数组nums，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/09/Squares_of_a_Sorted_Array/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -562,7 +553,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-04-19 23:02:45" itemprop="dateModified" datetime="2022-04-19T23:02:45+08:00">2022-04-19</time>
+                <time title="Modified: 2022-04-19 23:36:49" itemprop="dateModified" datetime="2022-04-19T23:36:49+08:00">2022-04-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -570,7 +561,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Thoughts/" itemprop="url" rel="index"><span itemprop="name">Thoughts</span></a>
+                  <a href="/categories/%E6%83%B3%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">想法</span></a>
                 </span>
             </span>
 
