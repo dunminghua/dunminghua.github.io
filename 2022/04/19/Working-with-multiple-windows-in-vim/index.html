@@ -31,18 +31,20 @@
     })();
 </script>
 
-  <meta name="description" content="不见所长，日有所长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dunming Hua&#39;s Blog">
-<meta property="og:url" content="https://dunminghua.github.io/categories/Thoughts/index.html">
+  <meta name="description" content="你是否会因为同时打开多个代码文件导致显示不全而烦恼？此文罗列了一些有用的操作！  prefix键 &lt;Ctrl + w&gt;     Opening split windows     命令 操作    Ctrl+w s 水平分割同一个文件   Ctrl+w v 垂直分割同一个文件   :sp[lit] filename 水平分割窗口并读取filename   :vsp[lit] fi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Working with multiple windows in vim">
+<meta property="og:url" content="https://dunminghua.github.io/2022/04/19/Working-with-multiple-windows-in-vim/index.html">
 <meta property="og:site_name" content="Dunming Hua&#39;s Blog">
-<meta property="og:description" content="不见所长，日有所长">
+<meta property="og:description" content="你是否会因为同时打开多个代码文件导致显示不全而烦恼？此文罗列了一些有用的操作！  prefix键 &lt;Ctrl + w&gt;     Opening split windows     命令 操作    Ctrl+w s 水平分割同一个文件   Ctrl+w v 垂直分割同一个文件   :sp[lit] filename 水平分割窗口并读取filename   :vsp[lit] fi">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-19T14:59:26.000Z">
+<meta property="article:modified_time" content="2022-04-19T15:25:41.083Z">
 <meta property="article:author" content="Hua Dunming">
-<meta property="article:tag" content="just do it">
+<meta property="article:tag" content="Vim">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://dunminghua.github.io/categories/Thoughts/">
+<link rel="canonical" href="https://dunminghua.github.io/2022/04/19/Working-with-multiple-windows-in-vim/">
 
 
 <script id="page-configurations">
@@ -50,12 +52,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: Thoughts | Dunming Hua's Blog</title>
+  <title>Working with multiple windows in vim | Dunming Hua's Blog</title>
   
 
 
@@ -176,57 +178,290 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dunminghua.github.io/2022/04/19/Working-with-multiple-windows-in-vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head_icon.jpg">
+      <meta itemprop="name" content="Hua Dunming">
+      <meta itemprop="description" content="不见所长，日有所长">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dunming Hua's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Working with multiple windows in vim
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-04-19 22:59:26 / Modified: 23:25:41" itemprop="dateCreated datePublished" datetime="2022-04-19T22:59:26+08:00">2022-04-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/04/19/Working-with-multiple-windows-in-vim/" class="post-meta-item leancloud_visitors" data-flag-title="Working with multiple windows in vim" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Thoughts
-          <small>Category</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/04/19/Working-with-multiple-windows-in-vim/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/04/19/Working-with-multiple-windows-in-vim/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <blockquote>
+<p>  你是否会因为同时打开多个代码文件导致显示不全而烦恼？此文罗列了一些有用的操作！</p>
+</blockquote>
+<p>prefix键 <code>&lt;Ctrl + w&gt;</code> </p>
+<ol>
+<li>  Opening split windows</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Ctrl+w s</td>
+<td align="left">水平分割同一个文件</td>
+</tr>
+<tr>
+<td align="left">Ctrl+w v</td>
+<td align="left">垂直分割同一个文件</td>
+</tr>
+<tr>
+<td align="left"><strong>:sp[lit] filename</strong></td>
+<td align="left">水平分割窗口并读取filename</td>
+</tr>
+<tr>
+<td align="left"><strong>:vsp[lit] filename</strong></td>
+<td align="left">垂直分割窗口并读取filename</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+<ol start="2">
+<li>  Closing split windows</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:q[uit]</td>
+<td>关闭当前的window</td>
+</tr>
+<tr>
+<td>:on[ly]</td>
+<td>关闭除当前active window的其他所有窗口</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>  Changing focus between windows</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+w w</td>
+<td>循环切换文件</td>
+</tr>
+<tr>
+<td>ctrl+w h</td>
+<td>切换光标到左边文件</td>
+</tr>
+<tr>
+<td>ctrl+w j</td>
+<td>切换光标到下方文件</td>
+</tr>
+<tr>
+<td>ctrl+w k</td>
+<td>切换光标到上方文件</td>
+</tr>
+<tr>
+<td>ctrl+w l</td>
+<td>切换光标到右方文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>  resizing windows</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+w +</td>
+<td>增加高度1行</td>
+</tr>
+<tr>
+<td>ctrl+w -</td>
+<td>减少高度1行</td>
+</tr>
+<tr>
+<td><strong>ctrl+w _</strong></td>
+<td>最大化当前窗口的高度</td>
+</tr>
+<tr>
+<td><strong>ctrl+w |</strong></td>
+<td>最大化当前窗口的宽度(超有用)</td>
+</tr>
+<tr>
+<td>ctrl+w =</td>
+<td>将所有窗口恢复成平均分割的状态</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>  Moving windows</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+w r</td>
+<td>Rotate all windows(旋转所有窗口)</td>
+</tr>
+<tr>
+<td><strong>ctrl+w x</strong></td>
+<td>Exchange current window with its neighbor(交换相邻窗口)</td>
+</tr>
+<tr>
+<td>ctrl+w H</td>
+<td>move current window to far left(移至最左边)</td>
+</tr>
+<tr>
+<td>ctrl+w J</td>
+<td>Move current window to bottom(移至底部)</td>
+</tr>
+<tr>
+<td>ctrl+w K</td>
+<td>Move current window to top(移至顶部)</td>
+</tr>
+<tr>
+<td>ctrl+w L</td>
+<td>Move current window to far right(移至最右边)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>see more <code>:help ctrl+w</code><br>参考:<a target="_blank" rel="noopener" href="http://vimcasts.org/episodes/working-with-windows/">Vim usage</a></p>
+</blockquote>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-04T19:45:37+08:00"
-              content="2021-12-04">
-          12-04
-        </time>
+    
+      <div>
+        
+
       </div>
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/04/idea-1/" itemprop="url">
-            <span itemprop="name">开题答辩结束后想法</span>
-          </a>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Vim/" rel="tag"># Vim</a>
+          </div>
 
-    </header>
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/09/Binary-Search/" rel="prev" title="704. Binary Search">
+      <i class="fa fa-chevron-left"></i> 704. Binary Search
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
